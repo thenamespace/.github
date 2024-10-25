@@ -1,0 +1,74 @@
+name: "Bug report"
+description: "Report a bug you've encountered"
+title: "[Bug]:"
+labels: ["bug"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for taking the time to report this bug!**
+        Please fill out the following sections to help us diagnose and resolve the issue.
+
+  - type: input
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "Briefly describe the issue."
+      placeholder: "E.g., Application crashes when clicking 'Submit'."
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "Steps to Reproduce"
+      description: "List the steps to reproduce the issue."
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: "Expected Behavior"
+      description: "What did you expect to happen?"
+      placeholder: "E.g., The form should submit without errors."
+      required: true
+
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: "Actual Behavior"
+      description: "What actually happened?"
+      placeholder: "E.g., The application crashes and returns an error code."
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: "Platform"
+      description: "Which platform are you using?"
+      options:
+        - "Windows"
+        - "macOS"
+        - "Linux"
+        - "Other"
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Application Version"
+      description: "Provide the version number of the application."
+      placeholder: "E.g., 1.2.3"
+      required: true
+
+  - type: file-upload
+    id: attachments
+    attributes:
+      label: "Screenshots or logs (optional)"
+      description: "Attach any relevant screenshots or logs to help diagnose the issue."
+

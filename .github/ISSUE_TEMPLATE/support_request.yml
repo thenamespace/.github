@@ -1,0 +1,47 @@
+name: "Support Request"
+description: "Request support or help"
+title: "[Support]:"
+labels: ["support"]
+assignees: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Need help?**
+        Please fill out the form below to submit your support request.
+
+  - type: input
+    id: issue_summary
+    attributes:
+      label: "Summary"
+      description: "Briefly describe your issue or request."
+      placeholder: "E.g., How to set up the environment?"
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Detailed Description"
+      description: "Provide details about the problem or your request for support."
+      placeholder: "E.g., I'm having trouble setting up the development environment following the README instructions."
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Urgency"
+      description: "How urgent is this support request?"
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+      required: true
+
+  - type: textarea
+    id: steps_taken
+    attributes:
+      label: "Steps Already Taken (Optional)"
+      description: "List any troubleshooting steps you've already tried."
+      placeholder: "E.g., I have re-installed the dependencies and checked the environment variables."
+      required: false
+
