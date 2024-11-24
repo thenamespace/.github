@@ -2,7 +2,6 @@ name: "Support Request"
 description: "Request support or help"
 title: "[Support]:"
 labels: ["support"]
-assignees: ""
 body:
   - type: markdown
     attributes:
@@ -16,7 +15,6 @@ body:
       label: "Summary"
       description: "Briefly describe your issue or request."
       placeholder: "E.g., How to set up the environment?"
-      required: true
 
   - type: textarea
     id: description
@@ -24,7 +22,6 @@ body:
       label: "Detailed Description"
       description: "Provide details about the problem or your request for support."
       placeholder: "E.g., I'm having trouble setting up the development environment following the README instructions."
-      required: true
 
   - type: dropdown
     id: urgency
@@ -35,7 +32,6 @@ body:
         - "Low"
         - "Medium"
         - "High"
-      required: true
 
   - type: textarea
     id: steps_taken

@@ -2,7 +2,6 @@ name: "Bug report"
 description: "Report a bug you've encountered"
 title: "[Bug]:"
 labels: ["bug"]
-assignees: ""
 body:
   - type: markdown
     attributes:
@@ -16,7 +15,6 @@ body:
       label: "Summary"
       description: "Briefly describe the issue."
       placeholder: "E.g., Application crashes when clicking 'Submit'."
-      required: true
 
   - type: textarea
     id: steps_to_reproduce
@@ -28,7 +26,6 @@ body:
         2. Click on '...'
         3. Scroll down to '...'
         4. See error
-      required: true
 
   - type: textarea
     id: expected_result
@@ -36,7 +33,6 @@ body:
       label: "Expected Behavior"
       description: "What did you expect to happen?"
       placeholder: "E.g., The form should submit without errors."
-      required: true
 
   - type: textarea
     id: actual_result
@@ -44,7 +40,6 @@ body:
       label: "Actual Behavior"
       description: "What actually happened?"
       placeholder: "E.g., The application crashes and returns an error code."
-      required: true
 
   - type: dropdown
     id: platform
@@ -56,7 +51,6 @@ body:
         - "macOS"
         - "Linux"
         - "Other"
-      required: true
 
   - type: input
     id: version
@@ -64,11 +58,4 @@ body:
       label: "Application Version"
       description: "Provide the version number of the application."
       placeholder: "E.g., 1.2.3"
-      required: true
-
-  - type: file-upload
-    id: attachments
-    attributes:
-      label: "Screenshots or logs (optional)"
-      description: "Attach any relevant screenshots or logs to help diagnose the issue."
 
