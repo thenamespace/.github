@@ -39,5 +39,4 @@ body:
       label: "Steps Already Taken (Optional)"
       description: "List any troubleshooting steps you've already tried."
       placeholder: "E.g., I have re-installed the dependencies and checked the environment variables."
-      required: false
 
