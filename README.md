@@ -9,7 +9,7 @@
 
   <!-- Description -->
   <p>
-    <strong>Namespace</strong> is an ENS partner, building everything you need to easily integrate and issue ENS Subnames to your users.
+    <strong>Namespace</strong> is an official ENS Service Provider supported by ENS Foundation and the DAO. We are focused on growing ENS through partnerships, integrations, and making subname registrations easy for other projects to implement using our platform and SDK.
     Join us as we build the future of decentralized identity and naming services!
   </p>
 
@@ -29,12 +29,12 @@
 <!-- Additional Info -->
 ## About Us
 
-We are passionate about blockchain.
-Our open-source repositories reflect our commitment to transparency, innovation, and collaboration.
+We are a team of Web3 builders, passionate about blockchain, decentralization, and launching new ideas to market. Currently, we're on a mission to replace 0x addresses with human-readable .eth names and subnames.
+Our open-source repositories reflect our commitment to transparency, accelerating innovation, and collaboration with the Web3 ecosystem.
 
 ## Get Involved
 
-Feel free to explore our repositories, contribute to our projects, and connect with us on our community platforms!
+Explore our repositories, contribute to our projects, and connect with us on our community platforms!
 Check out the [Contributing Guidelines](CONTRIBUTING.md) for ways to get started.
 
 ---
