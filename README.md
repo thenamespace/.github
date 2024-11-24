@@ -26,12 +26,6 @@
     </a>
   </p>
 
-  <!-- Visitor Counter -->
-  <p>
-    <img src="https://komarev.com/ghpvc/?thenamespacestyle=flat-square&color=blue" alt="Profile Views Counter">
-  </p>
-</div>
-
 <!-- Additional Info -->
 ## About Us
 
@@ -46,6 +40,6 @@ Check out the [Contributing Guidelines](CONTRIBUTING.md) for ways to get started
 ---
 
 <div align="center">
-  <p><strong>© [Year] [Your Company Name]. All rights reserved.</strong></p>
+  <p><strong>© 2024 Namespace. All rights reserved.</strong></p>
 </div>
 
