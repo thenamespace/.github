@@ -35,7 +35,7 @@ Our open-source repositories reflect our commitment to transparency, acceleratin
 ## Get Involved
 
 Explore our repositories, contribute to our projects, and connect with us on our community platforms!
-Check out the [Contributing Guidelines](CONTRIBUTING.md) for ways to get started.
+Check out the [Contributing Guidelines](/CONTRIBUTING.md) for ways to get started.
 
 ---
 
