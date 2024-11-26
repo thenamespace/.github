@@ -9,7 +9,8 @@
 
   <!-- Description -->
   <p>
-    <strong>Namespace</strong> is an official ENS Service Provider supported by ENS Foundation and the DAO. We are focused on growing ENS through partnerships, integrations, and making subname registrations easy for other projects to implement using our platform and SDK.
+    <strong>Namespace</strong> is an official ENS Service Provider supported by ENS Foundation and the DAO. We grow ENS through partnerships, integrations, and making subname registrations easy  to implement using our platform and SDK.
+    <br/>
     Join us as we build the future of decentralized identity and naming services!
   </p>
 
@@ -34,7 +35,8 @@ Our open-source repositories reflect our commitment to transparency, acceleratin
 
 ## Get Involved
 
-Explore our repositories, contribute to our projects, and connect with us on our community platforms!
+Explore our repositories, contribute to our projects, and connect with us!
+<br/>
 Check out the [Contributing Guidelines](/CONTRIBUTING.md) for ways to get started.
 
 ---
