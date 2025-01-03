@@ -42,6 +42,6 @@ Check out the [Contributing Guidelines](/CONTRIBUTING.md) for ways to get starte
 ---
 
 <div align="center">
-  <p><strong>© 2024 Namespace. All rights reserved.</strong></p>
+  <p><strong>© 2025 Namespace. All rights reserved.</strong></p>
 </div>
 
