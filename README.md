@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- Logo -->
-  <img src="https://i.imgur.com/5G80Goh.png" alt="Namespace Logo" width="100">
+  <img src="profile/assets/logo.svg" alt="Namespace Logo" width="100">
 
   <!-- Title -->
   <h1>Welcome to Namespace</h1>
