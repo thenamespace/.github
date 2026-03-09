@@ -1,0 +1,77 @@
+---
+name: Build and Push to GCP's Artifact Registry
+
+on:
+  workflow_call:
+    inputs:
+      project_id:
+        required: true
+        type: string
+      region:
+        required: true
+        type: string
+      workload_identity_provider:
+        required: true
+        type: string
+      push_latest:
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Authenticate to Google Cloud
+      id: auth
+      uses: google-github-actions/auth@v2
+      with:
+        project_id: ${{ inputs.project_id }}
+        workload_identity_provider: ${{ inputs.workload_identity_provider }}
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+
+    - name: Configure docker for artifact registry
+      run: |
+        gcloud auth configure-docker ${{ inputs.region }}-docker.pkg.dev
+
+    - name: Get metadata for tags
+      id: meta
+      run: |
+        # Get short SHA
+        echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+        # Get branch or tag name
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        else
+          echo "version=latest" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Build and push
+      env:
+        REGISTRY: ${{ inputs.region }}-docker.pkg.dev/${{ inputs.project_id }}
+        REPOSITORY: ${{ github.event.repository.name }}
+      run: |
+        # Build the image
+        docker build -t $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.version }} .
+        docker build -t $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.sha_short }} .
+
+        # Push all tags
+        docker push $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.version }}
+        docker push $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.sha_short }}
+
+        # If this is the main branch and push_latest is true, also tag as latest
+        if [[ "${{ github.ref }}" == "refs/heads/main" && "${{ inputs.push_latest }}" == "true" ]]; then
+          docker tag $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.version }} $REGISTRY/$REPOSITORY/$REPOSITORY:latest
+          docker push $REGISTRY/$REPOSITORY/$REPOSITORY:latest
+        fi
+
