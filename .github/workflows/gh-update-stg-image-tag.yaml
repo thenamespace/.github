@@ -1,0 +1,30 @@
+---
+name: Update Staging Image Version
+
+on:
+  workflow_call:
+    secrets:
+      REPOSITORY_DISPATCH_PAT:
+        required: true
+        description: "Triggers a PR creation in the infra repository"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Get short commit SHA
+        run: |
+          calculatedSha=$(git rev-parse --short ${{ github.sha }})
+          echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPOSITORY_DISPATCH_PAT }}
+          repository: ${{ vars.GH_INFRA_REPOSITORY_PATH }}
+          event-type: staging-image-tag-update
+          client-payload: '{
+            "repository": "${{ github.event.repository.name }}",
+            "image_tag": "${{ env.COMMIT_SHORT_SHA }}"
+          }'

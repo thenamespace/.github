@@ -1,4 +1,4 @@
----
+ ---
 name: Build and Push to GCP's Artifact Registry
 
 on:
@@ -10,13 +10,13 @@ on:
       region:
         required: true
         type: string
-      workload_identity_provider:
-        required: true
-        type: string
       push_latest:
         required: false
         type: boolean
         default: true
+    secrets:
+      WORKLOAD_IDENTITY_PROVIDER:
+        required: true
 
 jobs:
   build-and-push:
@@ -34,7 +34,7 @@ jobs:
       uses: google-github-actions/auth@v2
       with:
         project_id: ${{ inputs.project_id }}
-        workload_identity_provider: ${{ inputs.workload_identity_provider }}
+        workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
@@ -74,4 +74,3 @@ jobs:
           docker tag $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.version }} $REGISTRY/$REPOSITORY/$REPOSITORY:latest
           docker push $REGISTRY/$REPOSITORY/$REPOSITORY:latest
         fi
-
