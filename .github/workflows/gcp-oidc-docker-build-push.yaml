@@ -14,6 +14,9 @@ on:
         required: false
         type: boolean
         default: true
+      repository:
+        required: false
+        type: string
     secrets:
       WORKLOAD_IDENTITY_PROVIDER:
         required: true
@@ -59,7 +62,7 @@ jobs:
     - name: Build and push
       env:
         REGISTRY: ${{ inputs.region }}-docker.pkg.dev/${{ inputs.project_id }}
-        REPOSITORY: ${{ github.event.repository.name }}
+        REPOSITORY: ${{ inputs.repository || github.event.repository.name }}
       run: |
         # Build the image
         docker build -t $REGISTRY/$REPOSITORY/$REPOSITORY:${{ steps.meta.outputs.version }} .
