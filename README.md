@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- Logo -->
-  <img src="https://496b5602.pinme.dev" alt="Namespace Logo" width="300">
+  <img src="https://ad7fb2d6.pinme.dev" alt="Namespace Logo" width="100">
 
   <!-- Title -->
   <h1>Welcome to Namespace</h1>
@@ -31,13 +31,15 @@
 
 ## Links
 
-🌐 [Website](https://namespace.ninja) · 📖 [Docs](https://docs.namespace.ninja) · 🐦 [Twitter](https://x.com/namespace_eth) · 💬 [Builders Chat]([mailto:hello@namespace.tech](https://t.me/+qFoL4dWTVMQ3ZmMy)) · ✍️ [Blog]([https://namespace.tech/blog](https://thenamespace.substack.com/))
+🌐 [Website](https://namespace.ninja) · 📖 [Docs](https://docs.namespace.ninja) · 🐦 [Twitter](https://x.com/namespace_eth) · 💬 [Builders Chat](https://t.me/+qFoL4dWTVMQ3ZmMy) · ✍️ [Blog](https://thenamespace.substack.com/)
 
 ---
 
 ## Get Involved
 
-Explore repos, contribute, PRs are welcome! See [Contributing Guidelines](/CONTRIBUTING.md) to get started.
+Explore repos, contribute, PRs are welcome! 
+</br>
+See [Contributing Guidelines](/CONTRIBUTING.md) to get started.
 
 ---
 
