@@ -2,16 +2,16 @@
 
 <div align="center">
   <!-- Logo -->
-  <img src="https://i.imgur.com/5G80Goh.png" alt="Namespace Logo" width="100">
+  <img src="https://496b5602.pinme.dev" alt="Namespace Logo" width="300">
 
   <!-- Title -->
   <h1>Welcome to Namespace</h1>
 
   <!-- Description -->
   <p>
-    <strong>Namespace</strong> is an official ENS Service Provider supported by ENS Foundation and the DAO. We grow ENS through partnerships, integrations, and making subname registrations easy  to implement using our platform and SDK.
+    <strong>Namespace</strong> is an official ENS Service Provider supported by ENS Foundation and the DAO. We grow ENS through partnerships, integrations, and making subname registrations easy to implement
     <br/>
-    Join us as we build the future of decentralized identity and naming services!
+    We're on a mission to replace all 0x addresses with human-readable .eth names and subnames!
   </p>
 
   <!-- Social Links -->
@@ -28,20 +28,20 @@
   </p>
 
 <!-- Additional Info -->
-## About Us
 
-We are a team of Web3 builders, passionate about blockchain, decentralization, and launching new ideas to market. Currently, we're on a mission to replace 0x addresses with human-readable .eth names and subnames.
-Our open-source repositories reflect our commitment to transparency, accelerating innovation, and collaboration with the Web3 ecosystem.
+## Links
+
+🌐 [Website](https://namespace.ninja) · 📖 [Docs](https://docs.namespace.ninja) · 🐦 [Twitter](https://x.com/namespace_eth) · 💬 [Builders Chat]([mailto:hello@namespace.tech](https://t.me/+qFoL4dWTVMQ3ZmMy)) · ✍️ [Blog]([https://namespace.tech/blog](https://thenamespace.substack.com/))
+
+---
 
 ## Get Involved
 
-Explore our repositories, contribute to our projects, and connect with us!
-<br/>
-Check out the [Contributing Guidelines](/CONTRIBUTING.md) for ways to get started.
+Explore repos, contribute, PRs are welcome! See [Contributing Guidelines](/CONTRIBUTING.md) to get started.
 
 ---
 
 <div align="center">
-  <p><strong>© 2025 Namespace. All rights reserved.</strong></p>
+  <p><strong>© 2026 Namespace. All rights reserved. </strong></p>
 </div>
 
